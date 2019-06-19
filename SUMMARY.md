@@ -11,3 +11,5 @@
     * [反编译工具](01.tool/反编译.md)
     * [在线图片压缩](01.tool/图片压缩.md)
 
+* Dev Note
+  * [自定义输入法和键盘 01](02.dev note/Android输入法相关/Android InputMethodService|KeyboardView 自定义输入法和键盘 01.md)
