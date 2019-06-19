@@ -6,12 +6,17 @@
 ### 1.1 InputMethodService   
 
 看下这个类的介绍
+
 ![图片.png](InputMethodService.png)
+
 InputMethodService provides a standard implementation of an InputMethod
 作用 提供一个标准键盘实现 balabala.....
 
 
+#### 输入法生命周期
+
 ![输入法生命周期](输入法生命周期.png)
+
 请参考 http://blog.csdn.net/weijinqian0/article/details/76906317
 
 
