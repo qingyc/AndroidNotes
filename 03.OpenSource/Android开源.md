@@ -1,4 +1,5 @@
 # UI组件
+
 * RatingBar
 
 	[SimpleRatingBar](https://github.com/ome450901/SimpleRatingBar)
@@ -20,16 +21,15 @@
 	
 * 水波纹
 
- 	[RippleEffect](https://github.com/traex/RippleEffect) 
- 
-  	[MultiWaveHeader](https://github.com/scwang90/MultiWaveHeader)
+	[RippleEffect](https://github.com/traex/RippleEffect)
+	
+	[MultiWaveHeader](https://github.com/scwang90/MultiWaveHeader)
   
 * 阴影
  
-  	[ShadowLayout](https://github.com/Devlight/ShadowLayout)	
+	[ShadowLayout](https://github.com/Devlight/ShadowLayout)	
   
- 
-  	[ShadowLayout](https://github.com/ytjojo/ShadowLayout)
+	[ShadowLayout](https://github.com/ytjojo/ShadowLayout)
 
 * 圆角
 
@@ -41,7 +41,7 @@
 
 	[PhotoView](https://github.com/chrisbanes/PhotoView)
 
-  	[scale-image-view](https://github.com/davemorrissey/subsampling-scale-image-view) 	
+	[scale-image-view](https://github.com/davemorrissey/subsampling-scale-image-view) 	
 	
  	[BigImageViewer](https://github.com/Piasy/BigImageViewer)
 
@@ -58,6 +58,8 @@
  	[RxTool](https://github.com/vondear/RxTool)
  
  	[AndroidUtilCode](https://github.com/Blankj/AndroidUtilCode)
+ 	
+ 	[MobileInfo](https://github.com/guxiaonian/MobileInfo)
 
 * NET
 
@@ -75,8 +77,10 @@
 	[Android-Image-Cropper](https://github.com/ArthurHub/Android-Image-Cropper)
 	
 	[SmartCropper](https://github.com/pqpo/SmartCropper)
+
 	
-* 动画	
+* 动画
+	
 	[lottie](https://github.com/airbnb/lottie-android)
 	
 * 图表
@@ -94,6 +98,7 @@
  	[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)
   
 # 其他demo
+
 * 图片|视频|滤镜|OpenGL相关 
 
  	[MagicCamera](https://github.com/wuhaoyu1990/MagicCamera)
@@ -116,13 +121,3 @@
 [https://github.com/XXApple/AndroidLibs](https://github.com/XXApple/AndroidLibs)  
 
 [https://github.com/SenhLinsh/Android-Hot-Libraries](https://github.com/SenhLinsh/Android-Hot-Libraries)  
-
-# Notes
-
-[BeesAndroid](https://github.com/BeesX/BeesAndroid) 
-
-[AndroidDifficultAnalysis](https://github.com/ZhaoKaiQiang/AndroidDifficultAnalysis)
-
-[https://github.com/GcsSloop/AndroidNote](https://github.com/GcsSloop/AndroidNote)
-
-[https://github.com/francistao/LearningNotes](https://github.com/francistao/LearningNotes)
