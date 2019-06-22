@@ -238,10 +238,14 @@ set.playTogether(animator1,animator2)
 ```
 ##### 2.4.xml编写属性动画
 首先要在res目录下面新建一个animator文件夹
-    <animator>  对应代码中的ValueAnimator
-    <objectAnimator>  对应代码中的ObjectAnimator
-    <set>  对应代码中的AnimatorSet
-      
+
+<animator>  对应代码中的ValueAnimator
+
+<objectAnimator>  对应代码中的ObjectAnimator
+
+<set>  对应代码中的AnimatorSet
+
+```      
         <objectAnimator  
             android:duration="2000"  
             android:propertyName="translationX"  
@@ -277,11 +281,13 @@ set.playTogether(animator1,animator2)
             </set>  
         </set>    
     </set>  
---
+```
 
+```
     Animator animator = AnimatorInflater.loadAnimator(context, R.animator.anim_file);  
     animator.setTarget(view);  
     animator.start();  
+```
 
 ##### 2.5 PropertyValuesHolder(**ObjectAnimator.ofPropertyValuesHolder**)
 
@@ -295,7 +301,10 @@ PropertyValuesHolder这个类可以先将动画属性和值暂时的存储起来
 
  
 ###### 2.5.1 PropertyValuesHolder.ofKeyframe
+
+```
 public static PropertyValuesHolder ofKeyframe(String propertyName, Keyframe... values)  
+```
 
 *   *propertyName：**动画所要操作的属性名
 *   **values：**Keyframe的列表，PropertyValuesHolder会根据每个Keyframe的设定，定时将指定的值输出给动画。 
@@ -315,9 +324,12 @@ public static PropertyValuesHolder ofKeyframe(String propertyName, Keyframe
 
 ######  2.5.2 PropertyValuesHolder.ofXXX
 
+```
 ObjectAnimator.ofFloat中只比PropertyValuesHolder的ofFloat多了一个target，其它都是完全一样的
+```
 
 ###### 2.5.3  PropertyValuesHolder.ofObject
+
 ```
       PropertyValuesHolder charHolder =     
       PropertyValuesHolder.ofObject("CharText",new CharEvaluator(),new 
