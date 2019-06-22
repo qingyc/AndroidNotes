@@ -12,7 +12,9 @@
     * [在线图片压缩](01.tool/图片压缩.md)
 
 * Dev Note
-  * [自定义输入法和键盘 01](02.dev note/Android输入法相关/Android InputMethodService|KeyboardView 自定义输入法和键盘 01.md)
+	
+	* [Android动画小结](02.dev note/Android动画/Android动画小结.md)
+  	* [自定义输入法和键盘 01](02.dev note/Android输入法相关/Android InputMethodService|KeyboardView 自定义输入法和键盘 01.md)
   * [自定义输入法和键盘 02](02.dev note/Android输入法相关/Android InputMethodService|KeyboardView 自定义输入法和键盘 02.md)
 * [Android开源收集](03.open project/Android开源收集.md)
  	
