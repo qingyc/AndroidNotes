@@ -237,24 +237,29 @@ set.playTogether(animator1,animator2)
     animSet.start();  
 ```
 ##### 2.4.xml编写属性动画
+
 首先要在res目录下面新建一个animator文件夹
 
-<animator>  对应代码中的ValueAnimator
+```
+<animator>对应代码中的ValueAnimator
 
-<objectAnimator>  对应代码中的ObjectAnimator
+<objectAnimator>对应代码中的ObjectAnimator
 
-<set>  对应代码中的AnimatorSet
+<set>对应代码中的AnimatorSet
+```
 
 ```      
-        <objectAnimator  
+<objectAnimator  
             android:duration="2000"  
             android:propertyName="translationX"  
             android:valueFrom="-500"  
             android:valueTo="0"  
             android:valueType="floatType" >  
-        </objectAnimator>  
-      
-        <set android:ordering="together" >  
+</objectAnimator>  
+```
+
+```      
+<set android:ordering="together" >  
             <objectAnimator  
                 android:duration="3000"  
                 android:propertyName="rotation"  
