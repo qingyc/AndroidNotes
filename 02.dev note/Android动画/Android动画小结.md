@@ -71,6 +71,7 @@ Animation outAnim = AnimationUtils.loadAnimation(mContext,
 ##### 1.3.AnimationSet 
 构造方法
 
+```
     /**
      * Constructor to use when building an AnimationSet from code
      *
@@ -82,7 +83,7 @@ Animation outAnim = AnimationUtils.loadAnimation(mContext,
         setFlag(PROPERTY_SHARE_INTERPOLATOR_MASK, shareInterpolator);
         init();
     }
---
+
 
     /* 
      *  将四种动画效果放入同一个AnimationSet中 
@@ -96,7 +97,11 @@ Animation outAnim = AnimationUtils.loadAnimation(mContext,
      *  同时执行多个动画效果 
      */  
     view.startAnimation(animationSet); 
+    
+```
+
 #### 二.property animator
+
 
 常用
 
@@ -105,8 +110,9 @@ Animation outAnim = AnimationUtils.loadAnimation(mContext,
 * ofPropertyValuesHolder
 
 ##### 2.1.value animator
-offxxx
+* offxxx
 
+```
     ValueAnimator animator = ValueAnimator.ofFloat(startY, endY);
         animator.setDuration(300);
         animator.setInterpolator(new DecelerateInterpolator());
@@ -124,7 +130,11 @@ offxxx
         });
 
         animator.start();
-ofObject
+```  
+
+* ofObject
+
+```
 
     /**
      * Constructs and returns a ValueAnimator that animates between Object values. A single
@@ -181,19 +191,29 @@ ofObject
     animator.setDuration(10000);  
     animator.setInterpolator(new AccelerateInterpolator());  
     animator.start();  
+```
 
 ##### 2.2.object Animator
 缩放操作，比如说将TextView在垂直方向上放大3倍再还原，就可以这样写：
 
+```
     ObjectAnimator = ObjectAnimator.ofFloat(targetView, "scaleY", 1f, 3f, 1f);  
     animator.setDuration(5000);  
     animator.start();
+```
 
 ##### 2.3.animatorSet
-AnimatorSet set=new AnimatorSet();
-合并播放
-源码
 
+* set.playTogether
+
+```
+AnimatorSet set=new AnimatorSet();
+set.playTogether(animator1,animator2)
+```
+
+合并播放源码
+
+```
      public void playTogether(Animator... items) {
         if (items != null) {
             Builder builder = play(items[0]);
@@ -202,10 +222,12 @@ AnimatorSet set=new AnimatorSet();
             }
         }
     }
-set.playTogether(animator1,animator2)
 
-================
+```
 
+*  animSet.start() 
+
+```
     ObjectAnimator moveIn = ObjectAnimator.ofFloat(textview, "translationX", -500f, 0f);  
     ObjectAnimator rotate = ObjectAnimator.ofFloat(textview, "rotation", 0f, 360f);  
     ObjectAnimator fadeInOut = ObjectAnimator.ofFloat(textview, "alpha", 1f, 0f, 1f);  
@@ -213,7 +235,7 @@ set.playTogether(animator1,animator2)
     animSet.play(rotate).with(fadeInOut).after(moveIn);  
     animSet.setDuration(5000);  
     animSet.start();  
-
+```
 ##### 2.4.xml编写属性动画
 首先要在res目录下面新建一个animator文件夹
     <animator>  对应代码中的ValueAnimator
@@ -269,7 +291,7 @@ set.playTogether(animator1,animator2)
 
 PropertyValuesHolder这个类可以先将动画属性和值暂时的存储起来，后一起执行，在有些时候可以使用替换掉AnimatorSet
 
-![PropertyValuesHolder.png](http://upload-images.jianshu.io/upload_images/4413843-86046126f75506a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![PropertyValuesHolder.png](PropertyValuesHolder.png)
 
  
 ###### 2.5.1 PropertyValuesHolder.ofKeyframe
@@ -281,7 +303,7 @@ public static PropertyValuesHolder ofKeyframe(String propertyName, Keyframe
 所以完整的KeyFrame的使用代码应该是这样的：
 
 
-
+```
     1.  Keyframe frame0 = Keyframe.ofFloat(0f, 0);  
     2.  Keyframe frame1 = Keyframe.ofFloat(0.1f, -20f);  
     3.  Keyframe frame2 = Keyframe.ofFloat(1, 0);  
@@ -289,11 +311,14 @@ public static PropertyValuesHolder ofKeyframe(String propertyName, Keyframe
     5.  Animator animator =' ObjectAnimator.ofPropertyValuesHolder ' (mImage,frameHolder);  
     6.  animator.setDuration(1000);  
     7.  animator.start();
+```
 
 ######  2.5.2 PropertyValuesHolder.ofXXX
+
 ObjectAnimator.ofFloat中只比PropertyValuesHolder的ofFloat多了一个target，其它都是完全一样的
 
 ###### 2.5.3  PropertyValuesHolder.ofObject
+```
       PropertyValuesHolder charHolder =     
       PropertyValuesHolder.ofObject("CharText",new CharEvaluator(),new 
       Character('A'),new Character('Z'));  
@@ -302,10 +327,11 @@ ObjectAnimator.ofFloat中只比PropertyValuesHolder的ofFloat多了一个target�
       animator.setDuration(3000);  
       animator.setInterpolator(new AccelerateInterpolator());  
       animator.start(); 
+```
 
 ###### 2.5.4 ObjectAnimator. ofPropertyValuesHolder(view, PropertyValuesHolder_1, PropertyValuesHolder_2 ....)
 
-
+```
     //keyframe
         Keyframe keyframe1 = Keyframe.ofFloat(0.0f,0);
         Keyframe keyframe2 = Keyframe.ofFloat(0.25f,-30);
@@ -361,9 +387,11 @@ demo02
     animator.setDuration(3000);  
     animator.setInterpolator(new AccelerateInterpolator());  
     animator.start();
+```
 
 ###### 2.6.新api ViewPropertianimator
 
+```
     ViewPropertyAnimator animate = mViewById.animate();
 
                 Runnable mStartRun = new Runnable() {
@@ -390,12 +418,12 @@ demo02
                         .start();
             }
 
+```
 
 
 
-
-## [郭霖的专栏](http://blog.csdn.net/guolin_blog)
- [Android属性动画完全解析(上)，初识属性动画的基本用法](http://blog.csdn.net/guolin_blog/article/details/43536355)
+#### [郭霖的专栏](http://blog.csdn.net/guolin_blog)
+[Android属性动画完全解析(上)，初识属性动画的基本用法](http://blog.csdn.net/guolin_blog/article/details/43536355)
 
 ###  三 . ViewGroup Animation
 #### 3.1. LayoutAnimation
@@ -409,15 +437,18 @@ demo02
 这部分，我们就来看看layoutAnimation标签的用法，要使用layoutAnimation只需要两步：
 第一：定义一个layoutAnimation的animation文件，如：(anim/layout_animation.xml)
 
+```
       <?xml version="1.0" encoding="utf-8"?>
       <layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
                  android:delay="1"
                  android:animationOrder="normal"
                  android:animation="@anim/slide_in_left"/>
 
- 
+```
+
 其中的@anim/slide_in_left对应代码为：
 
+```
         <?xml version="1.0" encoding="utf-8"?>
         <set xmlns:android="http://schemas.android.com/apk/res/android" 
                 android:duration="1000">
@@ -425,9 +456,11 @@ demo02
         <alpha android:fromAlpha="0.0" android:toAlpha="1.0"/>
         </set>
 
+```
 
 第二步：在viewGroup类型的控件中，添加android:layoutAnimation=”@anim/layout_animation”，如：
 
+```
        <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
@@ -435,7 +468,7 @@ demo02
         android:layoutAnimation="@anim/layout_animation"
         />
 
-
+```
 ##### 代码实现 LayoutAnimationController
 
 ```
@@ -468,9 +501,10 @@ demo02
  */
 public class LayoutAnimationController { .... }
 ```
-----
+
 布局与xml的实现方式一样，唯一不同的是Listview中没有定义android:layoutAnimation=”@anim/layout_animation”
 
+```
       //代码设置通过加载XML动画设置文件来创建一个Animation对象；
         Animation animation= AnimationUtils.loadAnimation(this,R.anim.slide_in_left);         
        //得到一个 'LayoutAnimationController' 对象；
@@ -482,6 +516,7 @@ public class LayoutAnimationController { .... }
         controller.setDelay(0.3f);   //为ListView设置LayoutAnimationController属性；
         mListView.setLayoutAnimation(controller);
         mListView.startLayoutAnimation();
+```
 
 #### 3.1.2 gridLayoutAnimation
 
@@ -489,6 +524,7 @@ public class LayoutAnimationController { .... }
 
 1）、首先是gride_animation.xml
 
+```
       <?xml version="1.0" encoding="utf-8"?>
       <gridLayoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
                      android:rowDelay="75%"
@@ -496,19 +532,21 @@ public class LayoutAnimationController { .... }
                      android:directionPriority="none"
                      android:animation="@anim/slide_in_left"/>
 
-  
+``` 
 这里没有设置android:direction属性，采用默认值：left_to_right|top_to_bottom；然后是对应的animation动画slide_in_left.xml:
 
+```
     <?xml version="1.0" encoding="utf-8"?>
     <set xmlns:android="http://schemas.android.com/apk/res/android" android:duration="1000">
     <translate android:fromXDelta="-50%p" android:toXDelta="0"/>
     <alpha android:fromAlpha="0.0" android:toAlpha="1.0" />
     </set>
 
-
+```
 
 与LayoutAnimation所使用的动画一样，也是从左侧50%的位置移动到初始位置，同时透明度从0变到1；
 
+```
     <GridView
             android:id="@+id/grid"
             android:layout_width="match_parent"
@@ -522,8 +560,11 @@ public class LayoutAnimationController { .... }
             android:numColumns="auto_fit"
             android:stretchMode="columnWidth"
             android:verticalSpacing="10dp"/>
+```   
+    
 3.1.2.2 代码使用
 
+```
          GridView grid = (GridView) findViewById(R.id.grid);
         mDatas.addAll(getData());
         mGrideAdapter = new GridAdapter();
@@ -537,18 +578,20 @@ public class LayoutAnimationController { .... }
         controller.setDirectionPriority(GridLayoutAnimationController.PRIORITY_NONE);
         grid.setLayoutAnimation(controller);
         grid.startLayoutAnimation();
+```
 
- 3.1.2.3 gridLayoutAnimation标签属性
+3.1.2.3 gridLayoutAnimation标签属性
  
-directionPriority指gridview动画优先级，取值有row,column,none.意义分别为行优先，列优先，和无优先级（同时进行）
+directionPriority指gridview动画优先级，取值有**row,column,none**.意义分别为行优先，列优先，和无优先级（同时进行）
 
-direction表示gridview的各个item的动画方向，取值如下，可以通过“|”连接多个属性值。
-取值有四个：
+direction表示gridview的各个item的动画方向，取值如下，可以通过“|”连接多个属性值。取值有四个：
+
+```
 - left_to_right：列，从左向右开始动画
 - right_to_left ：列，从右向左开始动画
 - top_to_bottom：行，从上向下开始动画
 - bottom_to_top：行，从下向上开始动画
-
+```
 #### 3.2 LayoutTransaction
 
 上面虽然在ViewGroup类控件XML中仅添加一行android:animateLayoutChanges=[true]即可实现内部控件添加删除时都加上动画效果。但却只能使用默认动画效果，而无法自定义动画。
@@ -556,16 +599,20 @@ direction表示gridview的各个item的动画方向，取值如下，可以通�
 要使用LayoutTransaction是非常容易的，只需要三步： 
 **a 创建实例**
 
+```
  LayoutTransaction transitioner = new LayoutTransition();  
-
+```
 **b 创建设置动画**
 
-
+```
   ObjectAnimator animOut = ObjectAnimator.ofFloat(null, "rotation", 0f, 90f, 0f);  
   transitioner.setAnimator(LayoutTransition.DISAPPEARING, animOut);  
+```
 
 **c 将LayoutTransaction设置进ViewGroup**
 
+
+```
  linearLayout.setLayoutTransition(mTransitioner);
 
 
@@ -581,7 +628,10 @@ direction表示gridview的各个item的动画方向，取值如下，可以通�
         //出场动画:view显示时的动画  
         ObjectAnimator animOut = ObjectAnimator.ofFloat(null, "rotation", 0f, 90f, 0f);  
         mTransitioner.setAnimator(LayoutTransition.DISAPPEARING, animOut);  
-  
+        
+``` 
+ 
 ##### 3.3 listView 动画
+
 思路 convertView 添加动画
-http://blog.csdn.net/harvic880925/article/details/50988685
+[http://blog.csdn.net/harvic880925/article/details/50988685](http://blog.csdn.net/harvic880925/article/details/50988685)
