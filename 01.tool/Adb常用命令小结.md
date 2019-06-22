@@ -616,4 +616,4 @@ Activity manager dump options:
 
 
 
-[详细Adb常用命令](https://developer.android.com/studio/command-line/adb?hl=zh-cn)   
+[详细Adb常用命令](https://developer.android.com/studio/command-line/adb?hl=zh-cn)
