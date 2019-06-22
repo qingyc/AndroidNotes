@@ -88,6 +88,8 @@
 	[WilliamChart](https://github.com/diogobernardino/WilliamChart)
  
 * RecyclerView
+ 	
+ 	[PathLayoutManager](https://github.com/wuyr/PathLayoutManager)
  
  	[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)
   
