@@ -106,10 +106,24 @@
  	[AndroidCamera](https://github.com/aserbao/AndroidCamera)
  
  	[ImageEditor-Android](https://github.com/siwangqishiq/ImageEditor-Android)
- 
+ 	
+* 滤镜
+
+ 	[AndroidPhotoFilters](https://github.com/Zomato/AndroidPhotoFilters)
+ 	
+ 	[CameraFilter](https://github.com/nekocode/CameraFilter)
+ 	
+ 	[ShaderFilter](https://github.com/yulu/ShaderFilter)
+ 	
+ 	[AndroidCameraFilter](https://github.com/DingMouRen/AndroidCameraFilter)
+ 	
+ 	[Android-UltimateGPUImage](https://github.com/Windsander/Android-UltimateGPUImage)
+
 * OpenGL
 
 	[gpuimage](https://github.com/cats-oss/android-gpuimage) 
+	
+	[android-gpuimage-plus](https://github.com/wysaid/android-gpuimage-plus)
 
 * 壁纸
 
