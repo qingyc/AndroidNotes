@@ -48,7 +48,8 @@
 
 	
 
-* google 
+* 系统
+	[https://github.com/laobie/StatusBarUtil](https://github.com/laobie/StatusBarUtil)
 
 
 # 框架
@@ -96,6 +97,12 @@
  	[PathLayoutManager](https://github.com/wuyr/PathLayoutManager)
  
  	[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)
+ 	
+* DB
+
+	[greenDAO](https://github.com/greenrobot/greenDAO)
+	
+	[GreenDaoUpgradeHelper](https://github.com/yuweiguocn/GreenDaoUpgradeHelper) 	
   
 # 其他demo
 
@@ -106,6 +113,11 @@
  	[AndroidCamera](https://github.com/aserbao/AndroidCamera)
  
  	[ImageEditor-Android](https://github.com/siwangqishiq/ImageEditor-Android)
+ 	
+* 视频
+	
+	ffmpeg
+ 	[LanSoEditor_common](https://github.com/LanSoSdk/LanSoEditor_common)
  	
 * 滤镜
 

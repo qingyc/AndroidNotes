@@ -16,6 +16,7 @@
     * [自定义输入法和键盘02](02.DevNote/Android输入法相关/Android InputMethodService|KeyboardView 自定义输入法和键盘 02.md)
     * [Android源码Activity之setContentView](02.DevNote/Android源码Activity之setContentView/Android源码Activity之setContentView.md)
     * [remoteView的内部机制.md](02.DevNote/remoteView简记/remoteView的内部机制.md)
+    * [一个带缩放动画的RadioButton](02.DevNote/一个带缩放动画的RadioButton/README.md)
     
 * 开源收集
 	* [Android开源](03.OpenSource/Android开源.md)
