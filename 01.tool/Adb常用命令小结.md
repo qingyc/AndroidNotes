@@ -40,6 +40,12 @@ adb push local remote
 adb push foo.txt /sdcard/foo.txt
 ```
 
+查看anr日志
+
+```
+adb pull /data/anr
+```
+
 ### 四.Shell 在目标模拟器/设备实例中启动远程 shell
 
 不进入模拟器/设备实例上的 adb 远程 shell 发出设备命令:

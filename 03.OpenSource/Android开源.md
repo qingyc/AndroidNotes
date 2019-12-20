@@ -103,6 +103,13 @@
 	[greenDAO](https://github.com/greenrobot/greenDAO)
 	
 	[GreenDaoUpgradeHelper](https://github.com/yuweiguocn/GreenDaoUpgradeHelper) 	
+	
+# Tool
+	
+	
+   [jd-gui](https://github.com/java-decompiler/jd-gui)
+
+   [fastdex](https://github.com/typ0520/fastdex)	
   
 # 其他demo
 
